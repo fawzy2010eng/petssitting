@@ -431,6 +431,9 @@ nav .nav-link{
 /*end Feedbacks section*/
 
 /*start packege section*/
+.packages {
+	height: 800px;
+}
 .packages h2{
     font-size: 30px;
     margin-top: 80px;
@@ -441,6 +444,7 @@ nav .nav-link{
     float: left;
     width: 30%;
     padding-left: 0;padding-right: 0;
+	margin-bottom: 30px
 }
 .packages .card:nth-of-type(2){
     margin-left: 5%;
@@ -505,7 +509,7 @@ nav .nav-link{
 
 .gallery .unit{
     position: relative;
- 	height: 200px
+ 	height: 200px;
 }
 .gallery .unit img{
     transition: all .1s ease-in-out;
@@ -567,3 +571,78 @@ nav .nav-link{
     margin-bottom: 0
 }
 /*end gallery section*/
+
+/*start blog section*/
+.blog h4{
+	margin-top: 2em;
+	margin-bottom: 2em
+}
+.blog .card{
+	float: left;
+	width: 30%;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 3em
+}
+.blog .card:nth-of-type(2){
+	margin-left: 5%;
+	margin-right: 5%
+}
+
+@media(max-width : 1200px){
+/*
+    .blog {
+        height: 2400px
+    }
+*/
+    .blog .card{
+        width: 100%;
+		margin-bottom: 3em
+    }
+    .blog .card:nth-of-type(2){
+        margin-right: 0%;
+        margin-left: 0%
+    }
+}
+.
+.blog .card-title {
+	font-size: 1.2em;
+	color: #999;
+	cursor: pointer
+}
+.blog .card-title span{
+	margin-left: .5em;
+	margin-right: .5em;
+	color: #41c35f;
+}
+.blog .card-text {
+	text-align: left;
+	cursor: pointer
+}
+
+/*end blog section*/
+
+/*start form section*/
+
+
+.form .fxd-img{
+	background-image: url(../images/venture.jpg);
+    background-size: contain;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 700px;
+    padding-top: 50px;
+    padding-bottom: 120px;
+	width: 50%;
+	float: left
+	
+}
+.form form{
+	
+}    
+.form .fillInForm{
+	width: 50%;
+	background: linear-gradient(45deg,#207dff 0%,#00bd55 100%);
+
+}
+/*end form section*/
