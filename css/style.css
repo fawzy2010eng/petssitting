@@ -590,12 +590,7 @@ nav .nav-link{
 }
 
 @media(max-width : 1200px){
-/*
-    .blog {
-        height: 2400px
-    }
-*/
-    .blog .card{
+	.blog .card{
         width: 100%;
 		margin-bottom: 3em
     }
@@ -633,16 +628,39 @@ nav .nav-link{
     height: 700px;
     padding-top: 50px;
     padding-bottom: 120px;
-	width: 50%;
-	float: left
-	
+	float: left;
+	margin: auto
 }
+@media (min-width: 576px) {  
+	
+	.fxd-img{
+		background-size: cover
+	}
+}
+@media (min-width: 768px) {  
+	.fxd-img{
+		background-size: cover
+	}
+}
+@media (min-width: 992px) { 
+ 	
+	.fxd-img{
+		background-size: cover
+	}
+}
+@media (min-width: 1200px) {  
+    
+}
+
 .form form{
 	
 }    
 .form .fillInForm{
-	width: 50%;
+	
 	background: linear-gradient(45deg,#207dff 0%,#00bd55 100%);
 
+}
+.form .fillInForm .container{
+	width: 60%
 }
 /*end form section*/
