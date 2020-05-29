@@ -1,5 +1,4 @@
 body{
-    height: 10000px;
     background-color: #f8f9fd
 }
 .firstNav{
@@ -7,7 +6,7 @@ body{
     background-image: linear-gradient(to right,#207dff,#00bd55);
     display: flex;
     justify-content: flex-end;
-    color: white
+    color: white;
 }
 .firstNav .conts{
     width: 70%;
@@ -31,8 +30,8 @@ body{
 }
 
 .firstNav .links{
-    position: absolute;
-    right: 90px;
+	display: flex;
+	justify-content: flex-end
 }
 .firstNav .links div{
     float: left;
@@ -70,15 +69,14 @@ body{
 
 nav {
     padding-bottom: 0;
-    padding-top: 0
+    padding-top: 0;
+	display: flex
 }
 @media (min-width: 992px) {
   .collapse { 
-    position: absolute;
-    right: 90px
+	  
     }
 }
-
 nav .navbar-brand i{
     color: #00bd56 ;
     margin-top: .1em;
@@ -94,6 +92,7 @@ nav .nav-link{
     padding-top: 20px;
     color: black
 }
+
 .navbar-light .navbar-nav .nav-link{
     text-transform: uppercase;
     font-weight: 500;
@@ -123,6 +122,9 @@ nav .nav-link{
             opacity: 1
         }
     }
+}
+.navbar-nav{
+/*	margin-left: auto*/
 }
 /*end main navbar*/
 
@@ -361,7 +363,7 @@ nav .nav-link{
 /*start Feedbacks section*/
 
 .feedback .fxd-img{
-    background-image: url(../images/main.jpg);
+    background-image: url(../images/venture.jpg);
     background-size: cover;
     background-attachment: fixed;
     height: 500px;
@@ -450,21 +452,44 @@ nav .nav-link{
     margin-left: 5%;
     margin-right: 5%;
 }
-@media(max-width : 1200px){
+@media(max-width : 992px){
     .packages {
-        height: 1800px
+        height: 1350px;
+		display: flex
     }
     .packages .card{
-        width: 100%
+        width: 45%
     }
+	.packages .card:first-of-type{
+		margin-right: 10%
+	}
+	.packages .card:last-of-type{
+		margin-left: 27.5%
+	}
+	
     .packages .card:nth-of-type(2){
         margin-right: 0%;
         margin-left: 0%
     }
 }
+@media (max-width:576px){
+	.packages{
+		height: 1800px
+	}
+	.packages .card{
+		width: 100%;
+		
+	}
+	.packages .card:last-of-type{
+		margin-left: 0
+		
+	}
+}
+
+
 .packages .card img{
     width: 100%;
-    max-height: 160px
+    height: 160px
 }
 .packages .card-body h4:first-of-type{
     color: #28a745;
@@ -578,28 +603,53 @@ nav .nav-link{
 	margin-bottom: 2em
 }
 .blog .card{
-	float: left;
-	width: 30%;
-	padding-left: 0;
-	padding-right: 0;
-	margin-bottom: 3em
+    float: left;
+    width: 30%;
+    padding-left: 0;padding-right: 0;
+	margin-bottom: 30px
 }
 .blog .card:nth-of-type(2){
 	margin-left: 5%;
 	margin-right: 5%
 }
 
-@media(max-width : 1200px){
-	.blog .card{
-        width: 100%;
-		margin-bottom: 3em
+@media(max-width : 992px){
+    .blog {
+        height: 950px;
+		display: flex
     }
+    .blog .card{
+        width: 45%
+    }
+	.blog .card:first-of-type{
+		margin-right: 10%
+	}
+	.blog .card:last-of-type{
+		margin-left: 27.5%
+	}
+	
     .blog .card:nth-of-type(2){
         margin-right: 0%;
         margin-left: 0%
     }
 }
-.
+@media (max-width:576px){
+	.blog {
+		height: 1550px
+	}
+	.blog .card{
+		width: 100%;
+		
+	}
+	
+	.blog .card:first-of-type{
+		margin-right: 0
+	}
+	.blog .card:last-of-type{
+		margin-left: 0
+		
+	}
+}
 .blog .card-title {
 	font-size: 1.2em;
 	color: #999;
@@ -622,7 +672,7 @@ nav .nav-link{
 
 .form .fxd-img{
 	background-image: url(../images/venture.jpg);
-    background-size: contain;
+    background-size: cover;
 	background-repeat: no-repeat;
     background-attachment: fixed;
     height: 700px;
@@ -631,36 +681,147 @@ nav .nav-link{
 	float: left;
 	margin: auto
 }
-@media (min-width: 576px) {  
-	
-	.fxd-img{
-		background-size: cover
-	}
-}
-@media (min-width: 768px) {  
-	.fxd-img{
-		background-size: cover
-	}
-}
-@media (min-width: 992px) { 
- 	
-	.fxd-img{
-		background-size: cover
-	}
-}
-@media (min-width: 1200px) {  
-    
-}
 
-.form form{
+@media (max-width: 991px) { 
+	.form{
+		position: relative;
+		height: 780px
+	}
+	.fxd-img{
+		position: absolute;
+		width: 100%;
+		height: 700px;
+		left: 0;
+		top: 0;
+
+	}
+	.fillInForm{
+		position: absolute;
+		width: 100%;
+		height: 700px;
+		left: 0;
+		top: 0;
+		opacity: .7
+	}
+}
+@media (max-width: 668px){
 	
-}    
-.form .fillInForm{
+.form .fillInForm .container input[type=date]{
+/*	padding-bottom: 3rem*/
+	margin-bottom: 1rem
+}
 	
+}
+   
+.form .fillInForm{	
 	background: linear-gradient(45deg,#207dff 0%,#00bd55 100%);
-
 }
 .form .fillInForm .container{
 	width: 60%
+}	
+.form .dropdown .btn{
+	background-color: white;
+	width: 100%;
+	color: black;
+	text-align: left;
+	border-radius: 12px;
+	height: 3rem
+}
+.dropdown-toggle::after{
+	margin-left: 70%
+}
+.form .dropdown .dropdown-menu {
+	width: 100%
+}
+.form input{
+	height: 3rem;
+	border-radius: 9px
+}
+.form textarea{
+	width: 100%;
+	height: 12rem
+}
+.form button{
+	width: 100%;
+	height: 3rem;
+	background-color: #00bd56;
+	color: white;
+	border: 2px solid #00bd56;	
+	border-radius: 9px
+}
+.form button:hover{
+	background-color: transparent;
+	color: #00bd56;
 }
 /*end form section*/
+
+
+/*start footer*/
+
+footer{
+	background-color: black;
+	color: rgba(255,255,255,.6);
+	padding-bottom: 5rem
+}
+footer .row h4{
+	color: white;
+	margin-bottom: 3rem
+}
+footer .links div{
+	font-size: 1.5rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	float: left;
+	background-color: rgba(255,255,255,.3);
+	color: #28a745;
+	margin-right: .7rem;
+	cursor: pointer
+}
+footer .links div:hover{
+	color: white
+}
+footer .links div i{
+	margin-left: 12px;
+	margin-top: 12px
+}
+footer .media img{
+	width: 6rem;
+	height: 6rem
+}
+footer .media .mt-0{
+	cursor: pointer;
+	font-size: 1.4rem;
+	color: white
+}
+
+footer .media .mt-0:hover{
+	color: #28a745 
+	
+}
+footer .media  h4{
+	font-size: .8rem;
+	color: rgba(255,255,255,.6);
+}
+footer ul li a{
+	color: rgba(255,255,255,.6);
+}
+
+footer ul li a:hover{
+	
+	color: #28a745
+}
+footer .row div:last-of-type i{
+	float: left;
+	margin-right: 1rem;
+	display: inline-block
+}
+footer .p{
+	cursor: pointer
+}
+
+footer .p:hover{
+	color: #28a745
+}
+
+/*end footer*/
